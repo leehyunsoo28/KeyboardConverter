@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>키보드 변환기 — 한영 & 대소문자</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand"><span class="brandmark">↔</span><span>키보드 변환기</span></div>
+    <header><div class="eyebrow">Simple text tools</div><h1>입력하고, 바로 변환하세요</h1><p>한영 자판 변환부터 영문 대소문자까지 한곳에서.</p></header>
+    <section class="card" aria-label="텍스트 변환기">
+      <div class="toolbar" role="group" aria-label="변환 방식">
+        <span class="tool-label">변환 방식</span>
+        <button class="mode active" data-mode="enko" type="button">영어 자판 → 한글</button>
+        <button class="mode" data-mode="koen" type="button">한글 → 영어 자판</button>
+        <button class="mode" data-mode="lower" type="button">대문자 → 소문자</button>
+        <button class="mode" data-mode="upper" type="button">소문자 → 대문자</button>
+      </div>
+      <div class="panels">
+        <div class="panel"><div class="panel-head"><span>입력</span><span class="status" id="inputStatus">텍스트를 입력하세요</span></div><textarea id="input" spellcheck="false" placeholder="예: dkssudgktpdy 또는 HELLO WORLD"></textarea></div>
+        <button class="swap" id="swap" type="button" aria-label="입력과 결과 바꾸기" title="입력과 결과 바꾸기">⇄</button>
+        <div class="panel"><div class="panel-head"><span>변환 결과</span><span class="status" id="outputStatus">결과가 여기에 표시돼요</span></div><textarea id="output" readonly placeholder="변환 결과가 여기에 나타납니다"></textarea></div>
+      </div>
+      <div class="actions"><span class="hint">입력하는 동안 결과가 자동으로 바뀝니다.</span><button class="copy" id="copy" type="button">결과 복사</button></div>
+      <div class="examples"><strong>예시</strong> &nbsp; dkssudgktpdy → 안녕하세요 &nbsp;·&nbsp; HELLO → hello &nbsp;·&nbsp; hello → HELLO</div>
+    </section>
+    <div class="foot">자판·대소문자 변환은 브라우저에서 처리됩니다.</div>
+  </main>
+<script src="js/script.js"></script>
+</body>
+</html>
